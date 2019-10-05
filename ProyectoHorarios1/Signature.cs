@@ -11,19 +11,30 @@ namespace ProyectoHorarios1
         public string Name { get; set; }
         public int Id { get; set; }
         public string Group { get; set; }
-        public string Schedule { get; set; }
+        public string Day { get; set; }
+        public int StartHour { get; set; }
+        public int EndHour { get; set; }
+        public string Clasroom { get; set; }
         public string Professor { get; set; }
-        public List<Signature> signatures { get; set; }
 
-        public Signature(string name, int id, string group, string schedule, string professor)
+        public Signature(string name, int id, string group, string day, int startHour, int endHour, string clasroom, string professor)
         {
             this.Name = name;
             this.Id = id;
             this.Group = group;
-            this.Schedule = schedule;
+            this.Day = day;
+            this.StartHour = startHour;
+            this.EndHour = endHour;
+            this.Clasroom = clasroom;
             this.Professor = professor;
+        }
 
-            this.signatures.Add(this);
+        public Signature() { }
+
+        public override string ToString()
+        {
+            return string.Format("ID: {0}, Nombre: {1}, Grupo: {2}, Horario: {3} {4} {5} {6}, Docente: {7} \n", 
+                this.Id, this.Name, this.Group, this.Day, this.StartHour, this.EndHour, this.Clasroom, this.Professor);
         }
     }
 }

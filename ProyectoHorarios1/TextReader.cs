@@ -11,17 +11,14 @@ namespace ProyectoHorarios1
     public class TextReader
     {
         protected string BaseText { get; }
-
         private List<string> SplittedText { get; }
-
         public TextReader(string path)
         {
             this.BaseText = new TextExtractor().Extract(path).Text;
 
             this.SplittedText = TextSplitter.SplitPDF(this.BaseText);
         }
-
-        public void Print()
+        public void Insert()
         {
             int cont = 0;
             foreach (var line in this.SplittedText)
@@ -29,6 +26,10 @@ namespace ProyectoHorarios1
                 TextSplitter.SplitLine(this.SplittedText[cont]);
                 cont++;
             }
+        }
+        public void Print()
+        {
+            TextSplitter.Print();
         }
     }
 }

@@ -12,9 +12,16 @@ namespace ProyectoHorarios1
         static void Main(string[] args)
         {
             TextReader reader = new TextReader("Resources/Horarios Sistemas II-2019.pdf");
-
-            reader.Print();
-
+            reader.Insert();
+            List<string> selectedSignatures = new List<string>
+            {
+                "INGLES I",
+                "INTRODUCCION A LA PROGRAMACION"
+            };
+            foreach (string signature in selectedSignatures)
+            {
+                GenerateSchedule.Generate(signature);
+            }
             Console.ReadKey();
         }
     }

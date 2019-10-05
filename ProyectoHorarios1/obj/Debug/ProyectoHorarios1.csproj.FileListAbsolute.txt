@@ -3,7 +3,6 @@ C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\Proyec
 C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\ProyectoHorarios1.exe
 C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\ProyectoHorarios1.pdb
 C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\obj\Debug\ProyectoHorarios1.csprojAssemblyReference.cache
-C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\obj\Debug\ProyectoHorarios1.csproj.CoreCompileInputs.cache
 C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\obj\Debug\ProyectoHorarios1.csproj.CopyComplete
 C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\obj\Debug\ProyectoHorarios1.exe
 C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\obj\Debug\ProyectoHorarios1.pdb
@@ -38,3 +37,18 @@ C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\IKVM.R
 C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\TikaOnDotNet.dll
 C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\TikaOnDotNet.TextExtraction.dll
 C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\TikaOnDotNet.TextExtraction.pdb
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\Crc32C.NET.dll
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\DnsClient.dll
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\MongoDB.Bson.dll
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\MongoDB.Driver.dll
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\SharpCompress.dll
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\Snappy.NET.dll
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\System.Buffers.dll
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\Crc32C.NET.xml
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\DnsClient.xml
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\MongoDB.Bson.xml
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\MongoDB.Driver.xml
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\Snappy.NET.xml
+C:\Users\rodri\source\repos\ProyectoHorarios1\ProyectoHorarios1\bin\Debug\System.Buffers.xml

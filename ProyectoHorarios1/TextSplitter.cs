@@ -10,6 +10,8 @@ namespace ProyectoHorarios1
     public static class TextSplitter
     {
         public static List<string> result = new List<string>();
+
+        private static Controller controller = new Controller();
         public static List<string> SplitPDF(string text)
         {
             var textSplit = Regex.Split(text, "\r\n|\r|\n");
@@ -28,30 +30,68 @@ namespace ProyectoHorarios1
                     result.Add(line);
                 }
             }
-
+            controller.Clean();
             return result;
         }
-
         public static void SplitLine(string line)
         {
             if (line != string.Empty)
             {
-                string id, name, schedule, group, professor;
+                string id, name = "", nameAux, day, classroom, group, professor;
+                int startHour, endHour;
 
                 id = GetRegex(line, @"\d{7}");
 
-                name = GetRegex(line, @"[A-Z][^\d]+ ");
+                nameAux = GetRegex(line, @"[A-Z][^\d]+ ");
 
-                group = GetRegex(line, @"\b[A-Z]\d\b|\b\d[A-Z]\b|\b[0-9]\b|\b[0-9][0-9]\b|\b[A-Z]\b");
+                group = GetRegex(line, @"\b[A-Z]\d\b|\b\d[A-Z]\b|\b[0-9]\b|\b[0-9][0-9]\b|\b[CDE]\b");
 
-                schedule = GetRegex(line, @"\b[A-Z]{2}\b [0-9]+-[0-9]+\([0-9]+\)|\b[A-Z]{2}\b [0-9]+-[0-9]+\([0-9A-Z]+\)");
+                day = GetRegex(line, @"\b(?:LU|MA|MI|JU|VI|SA)\b");
+
+                startHour = int.Parse(GetRegex(line, @"\b[0-9]{4}\b|\b[0-9]{3}\b"));
+
+                endHour = int.Parse(GetRegex(line, @"\b[0-9]{4}(?!-)\b|\b[0-9]{3}(?!-)\b"));
+
+                classroom = GetRegex(line, @"\([0-9]+[A-Z]\)|\([0-9]+\)");
 
                 professor = GetRegex(line, @"\) [A-Z\s]+");
 
-                Console.WriteLine(string.Format("ID: {0} / Nombre: {1} / Grupo: {2} / Horario: {3} / Docente: {4} \n", id, name, group, schedule, professor));
+                professor = professor.Remove(0, 2);
+
+                foreach (string word in nameAux.Split(' '))
+                {
+                    if(!word.Equals("C") && !word.Equals("D") && !word.Equals("E"))
+                    {
+                        name += word;
+                        name += " ";
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                if(group.Equals("C") || group.Equals("D") || group.Equals("E"))
+                {
+                    name = name.Remove(name.Length - 1, 1);
+                }
+                else
+                {
+                    name = name.Remove(name.Length - 2, 2);
+                }
+
+                Signature signature = new Signature(name, int.Parse(id), group, day, startHour, endHour, classroom, professor);
+
+                controller.Insert(signature);
             }
         }
-
+        public static void Print()
+        {
+            foreach (Signature signature in controller.getAll())
+            {
+                Console.WriteLine(signature.ToString());
+            }
+        }
         public static string GetRegex(string line, string pattern)
         {
             string result ="";
